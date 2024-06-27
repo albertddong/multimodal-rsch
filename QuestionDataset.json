@@ -1,0 +1,254 @@
+{
+    "sets": [
+        {
+            "set_number": 1,
+            "questions": [
+                {
+                    "type": "simple",
+                    "content": "What type of device is connected directly to the ATM Router in the network diagram?",
+                    "answer": ""
+                },
+                {
+                    "type": "simple",
+                    "content": "Identify two types of workstations shown in the network topology.",
+                    "answer": ""
+                },
+                {
+                    "type": "complex",
+                    "content": "Considering the setup shown, explain how data might flow from the Web Server Windows 2003 to the Media PC, detailing any intermediate devices or networks it must pass through.",
+                    "answer": ""
+                },
+                {
+                    "type": "relational",
+                    "content": "Considering the security measures implemented in the second diagram with NAT (Network Address Translation), how does the approach to handling external traffic in the first diagram differ, particularly regarding the visibility and accessibility of internal network devices like the Web Server Windows 2003 and the SUN Workstations to external entities?",
+                    "answer": ""
+                }
+            ]
+        },
+        {
+            "set_number": 2,
+            "questions": [
+                {
+                    "type": "simple",
+                    "content": "What is the IP address of the web server as per the diagram?",
+                    "answer": ""
+                },
+                {
+                    "type": "simple",
+                    "content": "Identify the IP address range reserved for NAT as shown in the network topology.",
+                    "answer": ""
+                },
+                {
+                    "type": "complex",
+                    "content": "List all the possible paths between 151.6.0.11 and 151.5.1.25.",
+                    "answer": ""
+                },
+                {
+                    "type": "relational",
+                    "content": "Examine how the Spanning Tree Protocol (STP) is implemented in the network configuration of the second diagram to prevent loops, and discuss how this protocol could be beneficial or applied in the network setup depicted in the first diagram, particularly in managing traffic between switches and redundancy.",
+                    "answer": ""
+                }
+            ]
+        },
+        {
+            "set_number": 3,
+            "questions": [
+                {
+                    "type": "simple",
+                    "content": "How many switches have active links in the diagram?",
+                    "answer": ""
+                },
+                {
+                    "type": "simple",
+                    "content": "Identify which switch has inactive links and describe how those links are represented in the diagram.",
+                    "answer": ""
+                },
+                {
+                    "type": "complex",
+                    "content": "Analyze the network setup and explain how Spanning Tree Protocol (STP) or Rapid Spanning Tree Protocol (RSTP) might be used to manage network redundancy and prevent network loops based on the inactive links shown.",
+                    "answer": ""
+                },
+                {
+                    "type": "relational",
+                    "content": "Analyze the role of the firewall in the network shown in the second diagram and compare it with the absence of a similar security device in the first diagram.",
+                    "answer": ""
+                }
+            ]
+        },
+        {
+            "set_number": 4,
+            "questions": [
+                {
+                    "type": "simple",
+                    "content": "What type of device is used to connect the laptop wirelessly in the network diagram?",
+                    "answer": ""
+                },
+                {
+                    "type": "simple",
+                    "content": "Name the device that provides security between the Internet and the router in the diagram.",
+                    "answer": ""
+                },
+                {
+                    "type": "complex",
+                    "content": "Describe the path data would take from the PC to the Internet, detailing each device it passes through according to the network topology shown.",
+                    "answer": ""
+                },
+                {
+                    "type": "relational",
+                    "content": "How would the introduction of fiber optics benefit the first diagram's wireless and wired network components in terms of speed and data integrity?",
+                    "answer": ""
+                }
+            ]
+        },
+        {
+            "set_number": 5,
+            "questions": [
+                {
+                    "type": "simple",
+                    "content": "What type of medium is used between the devices marked with 'Fx/Tx' in the diagram?",
+                    "answer": ""
+                },
+                {
+                    "type": "simple",
+                    "content": "Identify the device that connects directly to the Internet as per the diagram.",
+                    "answer": ""
+                },
+                {
+                    "type": "complex",
+                    "content": "Explain the function of the protocol translator in the network setup shown.",
+                    "answer": ""
+                },
+                {
+                    "type": "relational",
+                    "content": "Compare the routing strategies used in both diagrams.",
+                    "answer": ""
+                }
+            ]
+        },
+        {
+            "set_number": 6,
+            "questions": [
+                {
+                    "type": "simple",
+                    "content": "How many local area networks (LANs) are depicted in the diagram?",
+                    "answer": ""
+                },
+                {
+                    "type": "simple",
+                    "content": "How many servers are connected directly to the WAN in the diagram?",
+                    "answer": ""
+                },
+                {
+                    "type": "complex",
+                    "content": "Describe the potential advantages of this network setup where multiple LANs are connected through a WAN using servers, particularly focusing on data management and accessibility across the network.",
+                    "answer": ""
+                },
+                {
+                    "type": "relational",
+                    "content": "Which diagram has segmented and department-specific network design, and which diagram has a more centralized model?",
+                    "answer": ""
+                }
+            ]
+        },
+        {
+            "set_number": 7,
+            "questions": [
+                {
+                    "type": "simple",
+                    "content": "What IP address is assigned to the HR department's computer on Floor 1?",
+                    "answer": ""
+                },
+                {
+                    "type": "simple",
+                    "content": "Name the departments connected to the switch labeled 'Floor 2'.",
+                    "answer": ""
+                },
+                {
+                    "type": "complex",
+                    "content": "Explain the significance of the 'CORE/DIST SW' in managing traffic between the two floors.",
+                    "answer": ""
+                },
+                {
+                    "type": "relational",
+                    "content": "How does the multi-router setup in the second diagram potentially improve redundancy and fault tolerance compared to the single core/distribution switch layout in the first diagram?",
+                    "answer": ""
+                }
+            ]
+        },
+        {
+            "set_number": 8,
+            "questions": [
+                {
+                    "type": "simple",
+                    "content": "What IP address is assigned to the Ethernet 0 interface of Router 5?",
+                    "answer": ""
+                },
+                {
+                    "type": "simple",
+                    "content": "Name two routers that are directly connected to the FDDI network.",
+                    "answer": ""
+                },
+                {
+                    "type": "complex",
+                    "content": "Discuss the routing path a packet would take from the computer labeled 'Interest02 Sun SPARC 5' in Subnet 3 to the Internet, considering the routers and interfaces it must pass through, including any firewall considerations.",
+                    "answer": ""
+                },
+                {
+                    "type": "relational",
+                    "content": "Identify the devices that facilitate external connectivity in both diagrams.",
+                    "answer": ""
+                }
+            ]
+        },
+        {
+            "set_number": 9,
+            "questions": [
+                {
+                    "type": "simple",
+                    "content": "What is the IP address range used for devices connected to the 8-Port Fast Ethernet Switch as shown in the diagram?",
+                    "answer": ""
+                },
+                {
+                    "type": "simple",
+                    "content": "Identify the device that functions as the gateway to the Internet in this network diagram.",
+                    "answer": ""
+                },
+                {
+                    "type": "complex",
+                    "content": "Describe how the Linksys WRT-54Gs router with DD-WRT VoIP firmware might interact with the VDSL router to manage both internet and voice traffic.",
+                    "answer": ""
+                },
+                {
+                    "type": "relational",
+                    "content": "From the two diagrams, identify the devices that manage the distribution of IP addresses within their respective networks.",
+                    "answer": ""
+                }
+            ]
+        },
+        {
+            "set_number": 10,
+            "questions": [
+                {
+                    "type": "simple",
+                    "content": "What IP address is assigned to the DNS server in the Server Room?",
+                    "answer": ""
+                },
+                {
+                    "type": "simple",
+                    "content": "Name two devices that are connected to Switch1 in the Computer Department.",
+                    "answer": ""
+                },
+                {
+                    "type": "complex",
+                    "content": "Analyze how traffic from a PC in the Exam Cell (IP: 192.168.3.3) reaches the FTP server in the Server Room (IP: 1.0.0.4), including the roles of any intermediate routers and switches as depicted in the diagram.",
+                    "answer": ""
+                },
+                {
+                    "type": "relational",
+                    "content": "Which diagram shows a greater number of distinct types of network devices?",
+                    "answer": ""
+                }
+            ]
+        }
+    ]
+}
