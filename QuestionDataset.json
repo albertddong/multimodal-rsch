@@ -6,17 +6,17 @@
                 {
                     "type": "simple",
                     "content": "What type of device is connected directly to the ATM Router in the network diagram?",
-                    "answer": ""
+                    "answer": "In the network diagram, a laptop is connected directly to the ATM Router. The laptop is shown with an arrow pointing from it to the ATM Router, indicating that it is directly connected to the router. This setup allows for communication between the laptop and other devices in the network through the router."
                 },
                 {
                     "type": "simple",
                     "content": "Identify two types of workstations shown in the network topology.",
-                    "answer": ""
+                    "answer": "In the Cisco Network Topology diagram, there are two types of workstations depicted: a desktop computer and a laptop computer. The desktop computer is connected to a switch (as indicated by the blue box with an arrow pointing towards it), while the laptop appears to be wirelessly connected to the network, as suggested by its position relative to the \"Wireless/Transport\" icon. Both types of workstations are shown receiving data from the server and interacting with other devices in the network."
                 },
                 {
                     "type": "complex",
                     "content": "Considering the setup shown, explain how data might flow from the Web Server Windows 2003 to the Media PC, detailing any intermediate devices or networks it must pass through.",
-                    "answer": ""
+                    "answer": "In this Cisco Network Topology diagram, data would flow from the Web Server running Windows 2003 to the Media PC as follows:\n1. The Web Server is connected directly to a switch (as indicated by the blue box with an arrow pointing up). This suggests that it has a direct Ethernet connection to the network through the switch.\n2. The switch acts as a central hub for managing traffic within the local area network (LAN). It receives data from the Web Server and forwards it to other devices on the LAN based on their IP addresses.\n3. From the switch, the data would be directed towards the Media PC, which is also connected to the same switch. The arrows between the switch and the Media PC indicate this direct connection.\n4. If there are any intermediate devices or networks in between, they are not shown in this diagram. However, if we consider a more complex network with routers, firewalls, or other security appliances, data would need to pass through these before reaching its destination. For example, the Web Server might be on one subnet and the Media PC on another, requiring routing through a router that sits between the switch and the Media PC."
                 },
                 {
                     "type": "relational",
@@ -31,17 +31,17 @@
                 {
                     "type": "simple",
                     "content": "What is the IP address of the web server as per the diagram?",
-                    "answer": ""
+                    "answer": "The IP address of the web server in this network diagram is 192.0.0.24. This can be inferred from the label on the server icon, which indicates \"Web Server\" and has the IP address 192.0.0.24 next to it."
                 },
                 {
                     "type": "simple",
                     "content": "Identify the IP address range reserved for NAT as shown in the network topology.",
-                    "answer": ""
+                    "answer": "The IP address range reserved for Network Address Translation (NAT) is from 192.0.0/24 to 192.0.0.100, as indicated by the highlighted area in the network topology diagram."
                 },
                 {
                     "type": "complex",
                     "content": "List all the possible paths between 151.6.0.11 and 151.5.1.25.",
-                    "answer": ""
+                    "answer": "The image you've provided appears to be a network diagram, which is used to represent how different devices are connected within a network. However, the resolution of the image is too low for me to read the specific details and provide an accurate list of paths between 151.6.0.11 and 151.5.1.25. If you can provide a higher-resolution image or more information about the network, I would be able to assist you better in identifying the possible paths."
                 },
                 {
                     "type": "relational",
@@ -56,17 +56,17 @@
                 {
                     "type": "simple",
                     "content": "How many switches have active links in the diagram?",
-                    "answer": ""
+                    "answer": "There are three switches with active links in the diagram. These switches are Switches A, B, and C. The connections between them indicate that they are actively exchanging data or maintaining a network connection. The other switches (D, E, F, G) do not have any active links as shown by the absence of lines connecting them to other switches."
                 },
                 {
                     "type": "simple",
                     "content": "Identify which switch has inactive links and describe how those links are represented in the diagram.",
-                    "answer": ""
+                    "answer": "The switch with inactive links is Switch C, as indicated by the dashed red lines connecting it to Switches D and E. These dashed red lines represent inactive or blocked links, which means that traffic cannot flow through those connections in this particular network configuration."
                 },
                 {
                     "type": "complex",
                     "content": "Analyze the network setup and explain how Spanning Tree Protocol (STP) or Rapid Spanning Tree Protocol (RSTP) might be used to manage network redundancy and prevent network loops based on the inactive links shown.",
-                    "answer": ""
+                    "answer": "The image depicts a network with multiple switches, labeled A through G, connected by Ethernet cables. There are also several laptops or workstations (L1, L2, L3) connected to these switches. The red lines indicate inactive links, which means they are not currently being used for data transmission.\nIn this setup, Spanning Tree Protocol (STP) or Rapid Spanning Tree Protocol (RSTP) would be implemented to manage network redundancy and prevent loops. These protocols ensure that only one active path exists between any two switches in the network at a time. This is important because if there were multiple active paths, data could loop around endlessly, causing congestion and potentially damaging the network infrastructure.\nHere's how STP or RSTP might work in this scenario:\n1. Each switch would be configured with its unique MAC address and priority value. The priority values are used to determine which switch becomes the Root Switch for the entire network tree.\n2. Switches would exchange BPDUs (Bridge Protocol Data Units) over active links, which contain information about their respective paths to the root switch.\n3. Based on the received BPDUs, each switch would calculate"
                 },
                 {
                     "type": "relational",
@@ -81,17 +81,17 @@
                 {
                     "type": "simple",
                     "content": "What type of device is used to connect the laptop wirelessly in the network diagram?",
-                    "answer": ""
+                    "answer": "In the network diagram, a Wireless Access Point (WAP) is used to connect the laptop wirelessly. The WAP acts as a bridge between the laptop and the rest of the wired network, allowing it to communicate with other devices such as the firewall, switch, and router."
                 },
                 {
                     "type": "simple",
                     "content": "Name the device that provides security between the Internet and the router in the diagram.",
-                    "answer": ""
+                    "answer": "The device that provides security between the Internet and the router in the diagram is a firewall. It is represented by the icon with an \"X\" through it, located between the cloud labeled \"Internet\" and the router. Firewalls are used to filter traffic and protect networks from unauthorized access or malicious activity."
                 },
                 {
                     "type": "complex",
                     "content": "Describe the path data would take from the PC to the Internet, detailing each device it passes through according to the network topology shown.",
-                    "answer": ""
+                    "answer": "1. **PC (Personal Computer):** This is where the user initiates the connection, typically through an application or web browser. The data originates here.\n2. **Switch:** The switch acts as a central hub that directs traffic to different devices on the network based on their IP addresses. It receives the data from the PC and forwards it to the appropriate destination.\n3. **Router:** The router is responsible for connecting multiple networks together, such as local area networks (LANs) and wide area networks (WANs). In this case, it connects the local network to the Internet. The router receives the data from the switch and determines the best route to send it over the Internet.\n4. **Firewall:** A firewall is a security device that monitors and filters traffic between the internal network and the external network (the Internet). It ensures that only authorized traffic passes through, protecting the local network from potential threats. The data passes through the firewall before reaching the public network.\n5. **"
                 },
                 {
                     "type": "relational",
@@ -106,17 +106,17 @@
                 {
                     "type": "simple",
                     "content": "What type of medium is used between the devices marked with 'Fx/Tx' in the diagram?",
-                    "answer": ""
+                    "answer": "The medium used between the devices marked with 'Fx/Tx' in the diagram is a fiber optic line. This can be inferred from the label \"Fiber Optic Line\" on the connection between those devices. Fx/Tx typically refers to the transmit (Tx) and receive (Rx) functions of Ethernet ports, which are used for sending and receiving data over optical fiber connections."
                 },
                 {
                     "type": "simple",
                     "content": "Identify the device that connects directly to the Internet as per the diagram.",
-                    "answer": ""
+                    "answer": "The device that connects directly to the Internet in this diagram is labeled \"Application Server\" and it's connected by a line with an arrow pointing towards the cloud symbol, which represents the Internet. This indicates that the Application Server is directly communicating with the Internet."
                 },
                 {
                     "type": "complex",
                     "content": "Explain the function of the protocol translator in the network setup shown.",
-                    "answer": ""
+                    "answer": "The protocol translator, as depicted in the image, serves to convert data between different protocols or formats that are used by various devices and networks within the system. This is particularly important when there are multiple layers of networking equipment, such as switches, routers, and servers, which may use different communication languages or standards.\nIn this network setup, the protocol translator acts as a bridge to ensure seamless data flow between these components. It translates the data from one format into another so that it can be understood by all devices involved in the transmission process. This is crucial for maintaining compatibility and efficient communication across the entire network infrastructure. Without such translation services, different parts of the network might not be able to communicate effectively, leading to data loss or network congestion.\nFor example, if one part of the network uses TCP/IP protocols while another uses a proprietary protocol, the translator would ensure that data can move between these two systems without any issues. This is especially important in complex networks where multiple vendors' equipment might be used and where different standards are employed for various purposes such as voice, video, or data transmission."
                 },
                 {
                     "type": "relational",
