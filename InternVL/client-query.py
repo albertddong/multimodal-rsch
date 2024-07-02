@@ -22,7 +22,7 @@ async def post_item():
             # Iterate through each question in the set
             for question in set_info['questions']:
                 # Check if the question is not of type 'relational'
-                if question['type'] == 'simple':
+                if question['type'] == 'complex':
                     # Print the question
                     print(question['question'])
                     

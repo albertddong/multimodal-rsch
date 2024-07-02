@@ -121,7 +121,7 @@ tokenizer = AutoTokenizer.from_pretrained(path, trust_remote_code=True)
 # set the max number of tiles in max_num
 generation_config = dict(
     num_beams=1,
-    max_new_tokens=150,
+    max_new_tokens=250,
     do_sample=False,
 )
 
