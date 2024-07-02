@@ -121,7 +121,7 @@ tokenizer = AutoTokenizer.from_pretrained(path, trust_remote_code=True)
 # set the max number of tiles in max_num
 generation_config = dict(
     num_beams=1,
-    max_new_tokens=512,
+    max_new_tokens=150,
     do_sample=False,
 )
 
@@ -167,7 +167,7 @@ async def summarize_vids(request: SummarizeVidsRequest):
     )
 
     question = prompt
-    response, history = model.chat(
+    response = model.chat(
         tokenizer,
         pixel_values,
         question,
@@ -198,7 +198,7 @@ async def summarize_vids(request: QueryImageRequest):
     pixel_values = load_image(frame, max_num=6).to(torch.bfloat16).cuda()
 
     question = prompt
-    response, history = model.chat(
+    response = model.chat(
         tokenizer,
         pixel_values,
         question,
@@ -211,7 +211,7 @@ async def summarize_vids(request: QueryImageRequest):
     return response
 
 
-if name == "main":
+if __name__ == "__main__":
     import uvicorn
 
     uvicorn.run(app, host="0.0.0.0", port=8000)
