@@ -1,0 +1,132 @@
+```
+/home/albert/multimodal-rsch-master/multimodal-rsch/network-pictures/valid_01.png, Identify the IP address of the router interface fa0/1 and its subnet mask, The IP address of the router interface fa0/1 is 172.16.1.1, and its subnet mask is 255.255.255.252. This represents a subnet that has only 4 IP addresses, ranging from 172.16.1.0 to 172.16.1.3, with 172.16.1.0 being the network address and 172.16.1.3 being the broadcast address.
+
+/home/albert/multimodal-rsch-master/multimodal-rsch/network-pictures/valid_01.png, How many users are connected to the switch linked through fa0/3 interface, and what is the IP range assigned to this subnet?, There are 66 users connected to the switch linked through the fa0/3 interface. The IP range assigned to this subnet is 172.16.3.0/25. This provides 128 IP addresses, ranging from 172.16.3.0 to 172.16.3.127, with 172.16.3.0 being the network address and 172.16.3.127 being the broadcast address.
+
+/home/albert/multimodal-rsch-master/multimodal-rsch/network-pictures/valid_01.png, Describe the IP configuration of the subnet connected via the fa0/2 interface, The subnet connected via the fa0/2 interface has an IP address of 172.16.2.0 with a subnet mask of 255.255.255.192. This subnet provides 64 IP addresses, ranging from 172.16.2.0 to 172.16.2.63, and is connected to 32 users.
+
+/home/albert/multimodal-rsch-master/multimodal-rsch/network-pictures/valid_01.png, Calculate the number of usable IP addresses in the subnet connected to fa0/4, and explain how they are typically allocated, The subnet connected to fa0/4 has a subnet mask of 255.255.255.224, which provides 30 usable IP addresses. Typically, the lowest address (172.16.2.65) is used as the network address, the highest address (172.16.2.95) is used as the broadcast address, and the addresses in between are allocated to end devices, resulting in 32 addresses in total.
+
+/home/albert/multimodal-rsch-master/multimodal-rsch/network-pictures/valid_01.png, Outline the segmentation of the entire network and its effect on network performance, The network is segmented into four subnets, each connected through a different router interface (fa0/1, fa0/2, fa0/3, and fa0/4). Each subnet has a specific number of users connected: 32 users on fa0/2 and fa0/4, 66 users on fa0/3, and two users on fa0/1. This segmentation reduces collision domains and enhances network performance by limiting the number of devices that share the same broadcast domain, thus improving bandwidth efficiency and reducing network congestion.
+/home/albert/multimodal-rsch-master/multimodal-rsch/network-pictures/valid_02.png, Identify the IP address of router R2 and its loopback address., The IP address of router R2 is 10.100.100.1, and its loopback address is 10.100.100.1.
+
+---
+
+/home/albert/multimodal-rsch-master/multimodal-rsch/network-pictures/valid_02.png, What routing protocols are utilized in this network diagram, and explain the significance of each., The network diagram utilizes BGP for external routing between the Internet, ISP_A, and ISP_B routers, and OSPF for internal routing within the Inside network. BGP (Border Gateway Protocol) is used for routing between different autonomous systems (ASNs 200, 300, 400), ensuring efficient and reliable communication between distinct administrative domains. OSPF (Open Shortest Path First) is used internally for the Inside network, providing fast convergence and efficient path selection within the autonomous system AS 100. OSPF's Area 0 serves as the backbone area, ensuring optimal routing within the Inside network.
+
+---
+
+/home/albert/multimodal-rsch-master/multimodal-rsch/network-pictures/valid_02.png, What is the purpose of loopback addresses in this network setup, and which devices have loopback addresses assigned?, Loopback addresses are utilized to ensure a stable and reliable IP address that can be used for router identification, network management, and routing processes. In this network setup, the routers with loopback addresses are the Internet router (1.1.1.1, 2.2.2.2, 3.3.3.3), R_1 (192.168.1.1), R_2 (10.100.100.1), and R_3 (10.100.100.2). These loopback addresses help in managing routing and maintain continuity even if actual network interfaces go down.
+
+---
+
+/home/albert/multimodal-rsch-master/multimodal-rsch/network-pictures/valid_02.png, Explain the significance of the IP subnet 10.0.0.0/24 in the network diagram., The IP subnet 10.0.0.0/24 is crucial as it represents the OSPF area 0 backbone network within the Inside domain. This subnet is used to interconnect R_1, R_2, and R_3 routers, facilitating internal communication and efficient routing within the autonomous system AS 100. The /24 subnet notation indicates that there are 256 IP addresses available (from 10.0.0.0 to 10.0.0.255), out of which addresses are assigned to routers as 10.0.0.1 for R_1, 10.0.0.2 for R_2, and 10.0.0.3 for R_3.
+
+---
+
+/home/albert/multimodal-rsch-master/multimodal-rsch/network-pictures/valid_02.png, How do the ASNs (Autonomous System Numbers) contribute to the network's routing policies, and which routers are associated with each ASN?, The ASNs (Autonomous System Numbers) are critical for defining distinct administrative boundaries and implementing specific routing policies between those domains. In this network, the Internet router is associated with ASN 400, ISP_A router with ASN 200, ISP_B router with ASN 300, and the Inside routers (R_1, R_2, R_3) with ASN 100. These ASNs help in the exchange of routing information and ensure compliant and controlled network traffic flow between different parts of the network, leveraging BGP for inter-AS routing and OSPF for intra-AS routing.
+1. **Image Path:** /home/albert/multimodal-rsch-master/multimodal-rsch/network-pictures/valid_03.png
+   **Question:** Identify the IP address of the Core router and the subnet it belongs to.
+   **Response:** The IP address of the Core router is 192.168.123.3, and it belongs to the subnet 192.168.123.0/24. This subnet can accommodate 256 IP addresses, ranging from 192.168.123.0 to 192.168.123.255, with 192.168.123.0 being the network address and 192.168.123.255 being the broadcast address.
+
+2. **Image Path:** /home/albert/multimodal-rsch-master/multimodal-rsch/network-pictures/valid_03.png
+   **Question:** Explain how SW1 can reach the Internet.
+   **Response:** SW1 can reach the Internet by first sending packets to the Core router through its Fa0/24 interface with the IP address 192.168.123.1. The Core router, which has an internal interface IP address of 192.168.123.3, will then route the traffic from its Fa0/0 interface to its Fa0/1 interface. Finally, from the Core's Fa0/1 interface, the traffic will be sent to the Internet through the IP address 146.185.130.223.
+
+3. **Image Path:** /home/albert/multimodal-rsch-master/multimodal-rsch/network-pictures/valid_03.png
+   **Question:** Why is the subnet mask 24 for the IP addresses in the internal network?
+   **Response:** The subnet mask is set to 24 for the IP addresses in the internal network to facilitate a class C network. This means there are 256 available IP addresses within this network (192.168.123.0 to 192.168.123.255). A /24 subnet mask, also expressed as 255.255.255.0 in decimal notation, allows for enough IP addresses for smaller networks, which is sufficient for the devices shown in the diagram.
+
+4. **Image Path:** /home/albert/multimodal-rsch-master/multimodal-rsch/network-pictures/valid_03.png
+   **Question:** Describe how SW2 can synchronize its time using pool.ntp.org at IP address 146.185.130.223.
+   **Response:** SW2 can synchronize its time by sending NTP requests to pool.ntp.org at the IP address 146.185.130.223. The request would route from SW2's Fa0/24 interface (192.168.123.2) to the Core router (192.168.123.3) via Fa0/0. The Core router will forward this request to the Internet via Fa0/1. The response from pool.ntp.org will follow the reverse path, allowing SW2 to have its time synchronized correctly.
+
+5. **Image Path:** /home/albert/multimodal-rsch-master/multimodal-rsch/network-pictures/valid_03.png
+   **Question:** How is the network structured in terms of connectivity and routing?
+   **Response:** The network is structured in a hierarchical model. At the top level, there is the Core router connected to the Internet via its Fa0/1 interface to the IP address 146.185.130.223 (pool.ntp.org). The Core router also has an internal interface Fa0/0 with the IP address 192.168.123.3 connecting to the internal network of 192.168.123.0/24. Within this internal network, there are two switches, SW1 and SW2, connected via their Fa0/24 interfaces to the subnet with IP addresses 192.168.123.1 and 192.168.123.2 respectively. Thus, SW1 and SW2 route traffic through the Core router to access both internal and external networks.Below are five question-answer pairs for the given network diagram in the specified format:
+
+1. **Image Path**: /home/albert/multimodal-rsch-master/multimodal-rsch/network-pictures/valid_04.png
+
+   **Question**: Identify the IP address of the modem bridge and the gateway associated with it.
+
+   **Answer**: The IP address of the modem bridge is 200.169.48.1. The gateway for the modem bridge is denoted as `(wan)` in the diagram, indicating that it is connected to a wide area network (WAN).
+
+2. **Image Path**: /home/albert/multimodal-rsch-master/multimodal-rsch/network-pictures/valid_04.png
+
+   **Question**: What are the DNS server IP addresses used across the entire network?
+
+   **Answer**: The DNS server IP addresses used across the entire network are 200.169.48.3 and 200.169.48.4. These addresses are consistently listed in all network segments, implying that all routing devices use these DNS servers for domain name resolution.
+
+3. **Image Path**: /home/albert/multimodal-rsch-master/multimodal-rsch/network-pictures/valid_04.png
+
+   **Question**: For the router in Building 1, Appartement 1, specify the start and end IP addresses of the subnet, the subnet mask, and the corresponding VLAN ID.
+
+   **Answer**: The router in Building 1, Appartement 1 has a subnet with a starting IP address of 10.10.1.0 and an ending IP address of 10.10.1.255. The subnet mask for this subnet is 255.255.255.0. The VLAN ID for this subnet is 1.
+
+4. **Image Path**: /home/albert/multimodal-rsch-master/multimodal-rsch/network-pictures/valid_04.png
+
+   **Question**: Describe the IP configuration for Building 7, Appartement 28, including the subnet range, subnet mask, and VLAN ID.
+
+   **Answer**: Building 7, Appartement 28 has an IP subnet configuration starting at 10.10.196.0 and ending at 10.10.196.255, with a subnet mask of 255.255.255.0. The VLAN ID associated with this subnet is 195, indicating segmentation and isolation of traffic within this part of the network.
+
+5. **Image Path**: /home/albert/multimodal-rsch-master/multimodal-rsch/network-pictures/valid_04.png
+
+   **Question**: Explain how the modem bridge facilitates internet connectivity for the network. Include details on the modem bridge's role and its connection to other components of the network.
+
+   **Answer**: The modem bridge plays a critical role in facilitating internet connectivity for the network by acting as the intermediary between the external wide area network (WAN) and the internal network. The modem bridge has the IP address 200.169.48.1 and connects directly to a router (with IP 200.169.48.2), which further distributes the connection to various subnets within the network. This router also provides DNS server addresses (200.169.48.3 and 200.169.48.4), ensuring consistent domain name resolution across the network. The connection enables the internal network devices to access external resources and interact with the larger internet infrastructure through the modem bridge."/home/albert/multimodal-rsch-master/multimodal-rsch/network-pictures/valid_05.png, Identify the role of the Cisco ASA 5505 in this network, The Cisco ASA 5505 is acting as a firewall in this network. Its primary responsibilities include monitoring and controlling incoming and outgoing network traffic based on predetermined security rules. It is connected to Switch 2 on Port 3 and has an IP address of 192.168.222.254, which places it within the LAN's subnet."
+
+"/home/albert/multimodal-rsch-master/multimodal-rsch/network-pictures/valid_05.png, Explain the purpose and functionality of the Netgear POE108P switches in the diagram, The Netgear POE108P switches, labeled as Switches 3 and 4 in the diagram, provide Power over Ethernet (PoE) capabilities. These switches deliver both power and network connectivity to PoE-enabled devices, such as IP cameras or wireless access points, over a single Ethernet cable. This helps to streamline the setup process and eliminates the need for separate power supplies for these devices."
+
+"/home/albert/multimodal-rsch-master/multimodal-rsch/network-pictures/valid_05.png, Identify and describe the connection between the domain controller and the rest of the network, The domain controller, with an IP address of 192.168.222.14, is directly connected to Port 2 of the HP 1810G Switch 2. This provides essential network services such as user authentication, directory services, and centralized management to the devices on the network. All network traffic that requires these services would be routed through the domain controller via Switch 2."
+
+"/home/albert/multimodal-rsch-master/multimodal-rsch/network-pictures/valid_05.png, Describe the path and significance of the public IP addresses listed in the diagram, The diagram lists two public IP addresses: 8.8.8.8 for the ASA and 8.8.8.6 for the DMZ. The ASA's public IP address allows devices on the LAN to communicate with external networks, serving as the primary point of entry and exit for internet traffic. The DMZ's public IP address (8.8.8.6) is used for devices located in the DMZ, which typically includes servers that need to be accessed from the public internet. This setup helps to isolate and protect internal network components from potential external threats."
+
+"/home/albert/multimodal-rsch-master/multimodal-rsch/network-pictures/valid_05.png, What is the role of the Zyxel G-4100v2 and which subnet is it part of, The Zyxel G-4100v2, situated in the DMZ and connected via Port 8 of the Netgear POE108P Switch 4, serves as a network device in charge of guest Wi-Fi control. It manages guest access to the internet and the network's public areas like the bar and balcony. The Zyxel G-4100v2 has an IP address of 172.16.10.57, and it belongs to the subnet 172.16.10.0/24, which indicates that it operates within a range of 256 IP addresses specifically designated for devices in the DMZ."1. `/path/to/network-diagram.png`,
+   **Question:** Identify the IP addresses assigned to the application clients on both subnetworks.
+   **Response:** The application clients in the left subnetwork have the IP addresses 135.70.2.0 and 135.70.2.2. The application clients in the right subnetwork have the IP addresses 135.70.3.1 and 135.70.3.2.
+
+2. `/path/to/network-diagram.png`,
+   **Question:** Describe the role of the subnet mask in the given network diagram.
+   **Response:** The subnet mask in the given network diagram splits the IP address into the host and network addresses. This process allows the network to distinguish between different subnets and hosts within those subnets. It essentially helps in routing traffic efficiently and in managing IP addresses more effectively.
+
+3. `/path/to/network-diagram.png`,
+   **Question:** Explain how the routers are connected to the server and the internet.
+   **Response:** The routers in the diagram are connected to the server, which in turn is directly connected to the Internet. This setup means the routers facilitate internal network communication and also serve as gateways for the devices within each subnetwork to access the server and, ultimately, the Internet.
+
+4. `/path/to/network-diagram.png` ,
+   **Question:** What is the significance of the labels 'Host IP address' and 'Network IP address' in the diagram?
+   **Response:** In the context of this network diagram, the "Host IP address" (e.g., 135.70.1.0) is used to identify an individual device within a subnet, whereas the "Network IP address" (e.g., 135.70.3.0) identifies an entire subnetwork within the larger network. These labels help in routing and directing traffic appropriately to either an individual device or across a specific subnetwork.
+
+5. `/path/to/network-diagram.png`,
+   **Question:** How does the IP allocation in this network diagram ensure effective network management?
+   **Response:** The IP allocation in the network diagram, with distinct subnets and specific IP addresses for hosts and networks, ensures that each device and subnetwork can be uniquely identified and efficiently managed. By segmenting the network into smaller subnets, it becomes easier to monitor and control traffic, implement security policies, and manage IP address assignments without overlap or conflict./home/albert/multimodal-rsch-master/multimodal-rsch/network-pictures/valid_07.png, What is the IP address of the HR computer and which port on the HR switch is it connected to?, The IP address of the HR computer is 10.0.10.10. It is connected to the Fa0/0 port on the HR switch.
+
+/home/albert/multimodal-rsch-master/multimodal-rsch/network-pictures/valid_07.png, How does the CORE/DIST switch connect to the FINANCE-2 switch and the associated computer? Describe the ports used and the IP address at each step., The CORE/DIST switch connects to the Floor 2 switch using the Fa0/6 port. From the Floor 2 switch, the connection to the FINANCE-2 switch is through the Fa0/3 port. The FINANCE-2 switch connects to its associated computer via the Fa0/2 port, which has the IP address 10.0.20.15.
+
+/home/albert/multimodal-rsch-master/multimodal-rsch/network-pictures/valid_07.png, Describe the full network data path from the CORE/DIST switch to the PRODUCTION-2 computer including all intermediary switches and ports, The CORE/DIST switch connects to the Floor 2 switch via port Fa0/6. From the Floor 2 switch, the connection proceeds through port Fa0/4 to the PRODUCTION-2 switch. The PRODUCTION-2 switch further connects to the PRODUCTION-2 computer through port Fa0/2. The IP address associated with the PRODUCTION-2 computer is 10.0.30.15.
+
+/home/albert/multimodal-rsch-master/multimodal-rsch/network-pictures/valid_07.png, Identify all devices connected directly to the Floor 1 Switch and the IP addresses of their connected computers, The devices directly connected to the Floor 1 Switch are the HR switch, the FINANCE switch, and the PRODUCTION switch. The IP addresses of the computers connected to these switches are:
+1. HR computer: 10.0.10.10
+2. FINANCE computer: 10.0.20.10
+3. PRODUCTION computer: 10.0.30.10
+
+/home/albert/multimodal-rsch-master/multimodal-rsch/network-pictures/valid_07.png, Explain how redundancy is or isn't set up between the switches in this network, In this network, redundancy is not set up between the switches. Each switch is connected through a single path to the preceding switches, indicating a single point of failure. For instance, the CORE/DIST switch connects either through the Floor 1 or Floor 2 switch without an alternative pathway to support connection continuity in case of a single link or switch failure. Implementing redundant links, such as additional connections between CORE/DIST and each Floor switch or between HR, FINANCE, and PRODUCTION switches could improve network reliability./path/to/your/image/network_diagram.png, Identify the IP address and subnet of Subnet 4, 
+Subnet 4's IP range is defined by the address 128.59.14.16 with a subnet mask of /29. This indicates that the subnet has 8 IP addresses, ranging from 128.59.14.16 to 128.59.14.23 where 128.59.14.16 is the network address and 128.59.14.23 is the broadcast address. One example IP address within this subnet would be 128.59.14.18, which is assigned to a FreeBSD x86 machine labeled as IRT.
+
+/path/to/your/image/network_diagram.png, What is the role of the Firewall in the network, The firewall in the network diagram is placed at the edge of the network functioning as a barrier between the internal network and the internet. It generally operates on the IP address 128.59.14.36. The primary role of the firewall is to enforce security policies, control incoming and outgoing network traffic, and protect the internal network from external threats and unauthorized access from the internet.
+
+/path/to/your/image/network_diagram.png, Describe the function of Router 2 in the context of the entire network, 
+Router 2, equipped with a 7000 model, is a crucial component connecting multiple segments of this network. It is connected to Router 1 via fiber (FDDI 0/0) with the IP address 192.68.1.2 and also has serial connections to other routers including Router 4 and Router 3. Router 2's key role is to forward data packets between these segments, route traffic efficiently, and bridge the network using various transmission mediums such as fiber and serial links to ensure robust and resilient connectivity.
+
+/path/to/your/image/network_diagram.png, What are the specific IP addresses and roles of interfaces involved in Router 1's configuration?, 
+Router 1, described as a 7000 model, has several interfaces with distinct IP addresses and associated links. These interfaces are:
+- Serial 2/0 with IP address 192.168.15.1
+- Serial 2/1 with IP address 192.168.14.1
+- Serial 2/2 with IP address 192.168.12.1
+- Serial 2/3 with IP address 192.168.13.1
+- FDDI 0/0 fiber interface with IP address 192.68.1.1
+
+Router 1 serves as a central node that interconnects various parts of the network via serial and fiber connections, facilitating high-speed data transfer and reliable communication across different network segments.
+
+/path/to/your/image/network_diagram.png, Explain the connectivity and addressing scheme for Subnet 3, 
+Subnet 3 is designated with the address range 128.59.14.8/29, indicating it contains 8 IP addresses spanning from 128.59.14.8 to 128.59.14.15. Within this subnet, the network address is 128.59.14.8 and the broadcast address is 128.59.14.15. The devices connected to this subnet include Interest02, a Sun SPARC 5 machine with an IP address of 128.59.14.10. This subnet is linked to Router 4 via the Ethernet 0 interface with an address of 128.59.14.9, allowing local network traffic to be routed efficiently to and from the devices within this subnet and other parts of the network.
