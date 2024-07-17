@@ -59,11 +59,6 @@ with open("demo_gpt_response.csv", "w") as f:
     # Getting the base64 string
     # base64_image = encode_image(image_path)
 
-
-
-
-
-
 data = pd.read_csv(file_path)
 
 # Extracting the questions and appending them to a list
