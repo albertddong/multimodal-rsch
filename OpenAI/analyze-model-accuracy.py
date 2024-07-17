@@ -17,6 +17,7 @@ headers = {
   "Content-Type": "application/json",
   "Authorization": f"Bearer {api_key}"
 }
+
 # Load the CSV file
 file_path = '/home/albert/multimodal-rsch-master/multimodal-rsch/updated_network_questions_answers_v5.csv'
 print(sorted(os.listdir('/home/albert/multimodal-rsch-master/multimodal-rsch/network-pictures')))
@@ -32,7 +33,7 @@ with open("demo_gpt_response.csv", "w") as f:
             "content": [
                 {
                 "type": "text",
-                "text": f"Give me 5 question answer pairs for the following network diagram. Each answer should be detailed and in complete sentences. Add in a mix of normal questions and harder questions that go beyond identifying things on the screen and require multiple sentences. I want the output in a very specific format, including the image path, the question, and the response. An example of the output you would give for a single question/answer pair is: '/home/albert/multimodal-rsch-master/multimodal-rsch/network-pictures/{img_path}, Identify the IP address of the router RI and the subnet it belongs to, The IP address of router R1 is 10.1.52.3, and it belongs to the subnet 10.1.52.0/24. This subnet indicates that the network has 256 IP addresses, ranging from 10.1.52.0 to 10.1.52.255, with 10.1.52.0 being the network address and 10.1.52.255 being the broadcast address.'"
+                "text": f'Give me 5 question answer pairs for the following network diagram. Each answer should be detailed and in complete sentences. Add in a mix of normal questions and harder questions that require multiple sentences. The output will be formatted for a csv file. It will be the image path, the question, and the response. An example of the output you will provide for a single question/answer pair is: /home/albert/multimodal-rsch-master/multimodal-rsch/network-pictures/{img_path}, Describe the connection between the Core router and the NTP server., The Core router is connected to the NTP server over the Internet using the interface Fa0/1.,'
                 },
                 {
                 "type": "image_url",
